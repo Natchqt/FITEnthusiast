@@ -35,7 +35,7 @@
 
     <!-- Summary of selected plans -->
     <div class="summary">
-      <h3>Selected Plans</h3>
+      <h3></h3>
       <ul class="list-group" id="selectedPlans">
         <!-- Plan items will be dynamically added here -->
       </ul>
