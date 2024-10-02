@@ -15,8 +15,8 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>Choose Payment Method</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Choose Payment Method</h2>
     <div class="payment-methods">
       <div class="form-check">
         <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod1" value="pay on counter" checked>
@@ -26,23 +26,37 @@
       </div>
       
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod3" value="creditcard">
-        <label class="form-check-label" for="paymentMethod3">
+        <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod2" value="creditcard">
+        <label class="form-check-label" for="paymentMethod2">
           Credit Card
+        </label>
+      </div>
+      
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="paymentMethod" id="paymentMethod3" value="paypal">
+        <label class="form-check-label" for="paymentMethod3">
+          PayPal
         </label>
       </div>
     </div>
 
     <!-- Summary of selected plans -->
-    <div class="summary">
-      <h3></h3>
+    <div class="summary mt-4 p-3 border border-light rounded bg-light">
+      <h3 class="text-center">Summary of Selected Plans</h3>
       <ul class="list-group" id="selectedPlans">
         <!-- Plan items will be dynamically added here -->
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Premium Plan
+          <span class="badge bg-primary rounded-pill">₱4,499</span>
+        </li>
       </ul>
+      <p class="text-end"><strong>Total:</strong> <span id="totalAmount" class="badge bg-secondary">₱4,499</span></p>
     </div>
 
-    <button class="btn btn-primary mt-3" id="confirmPayment">Confirm Payment</button>
-  </div>
+    <div class="text-center">
+      <button class="btn btn-primary mt-3" id="confirmPayment">Confirm Payment</button>
+    </div>
+</div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>

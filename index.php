@@ -10,55 +10,91 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
    
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
     <a class="navbar-brand" href="index.php">FITEnthusiast</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link" href="index.php">Home</a>
+          <a class="nav-link active" href="index.php">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#trainers">Trainers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#plans">Plan</a>
+          <a class="nav-link" href="#plans">Plans</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact Us</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Register</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+          </ul>
         </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-    <!-- Home Section -->
+<!-- Bootstrap 5 Scripts (Make sure you include Bootstrap 5 JS and CSS files) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+
+  <!-- Home Section -->
   
 
-   <!-- About Us Section -->
-   <section id="about" class="about-section">
-  <h2></h2>
-  <div class="about-content">
-    <p>Welcome to FITEnthusiast. We offer a variety of fitness classes and personal training sessions to help you achieve your fitness goals. Our experienced trainers are here to guide and motivate you every step of the way.</p>
-    <img src="styles/gym.jpg" alt="About Us">
+ <!-- About Us Section -->
+ <section id="about" class="about-section py-5 bg-light text-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div class="col-lg-6">
+        <h2 class="mb-4 text-uppercase font-weight-bold">About <span class="text-primary">FITEnthusiast</span></h2>
+        <p class="lead font-weight-normal">
+          Welcome to FITEnthusiast, your go-to platform for achieving your fitness goals. 
+          We offer a wide range of fitness classes and personal training sessions designed 
+          to cater to all fitness levels. Our certified trainers are dedicated to guiding 
+          and motivating you every step of the way.
+        </p>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-check-circle-fill text-primary"></i> <span class="font-weight-bold">Customized fitness plans</span></li>
+          <li><i class="bi bi-check-circle-fill text-primary"></i> <span class="font-weight-bold">Group and personal training</span></li>
+          <li><i class="bi bi-check-circle-fill text-primary"></i> <span class="font-weight-bold">State-of-the-art equipment</span></li>
+        </ul>
+        <a href="#plans" class="btn btn-primary mt-4">Explore Our Plans</a>
+      </div>
+      
+      <!-- Image Content -->
+      <div class="col-lg-6 text-center">
+        <img src="styles/gym.jpg" class="img-fluid rounded shadow-lg" alt="About Us" style="max-width: 90%;">
+      </div>
+    </div>
   </div>
 </section>
 
 
+
+<!-- Bootstrap Icons (for check icons) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+
 <!-- Trainers Section -->
- <!-- Trainers Section -->
  <section id="trainers" class="container my-5">
     <h2 class="text-center mb-4">Our Trainers</h2>
     <div class="row">
@@ -91,67 +127,103 @@
       </div>
     </div>
   </section>
-  
+
+
+  <!-- Plan Section -->
 <section id="plans" class="plan-section">
   <h2>Choose a Plan</h2>
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <div class="card plan-card">
-          <h5>Basic Plan</h5>
-          <p><strong>Fees:</strong> ₱1,699/month</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Rerum, sapiente ipsa quasi corporis necessitatibus voluptate.</li>
-            <li>Nam voluptates ex quam, quidem quae</li>
-            <li>Est nam expedita quam ab et necessitatibus assumenda laboriosam eligendi?</li>
-          </ul>
-          <button class="btn btn-primary add-to-cart" data-plan="Basic Plan" data-fee="1699">Add Plan</button>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card plan-card">
-          <h5>Standard Plan</h5>
-          <p><strong>Fees:</strong> ₱2,799/month</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Rerum, sapiente ipsa quasi corporis necessitatibus voluptate.</li>
-            <li>Nam voluptates ex quam, quidem quae</li>
-            <li>Est nam expedita quam ab et necessitatibus assumenda laboriosam eligendi?</li>
-          </ul>
-          <button class="btn btn-primary add-to-cart" data-plan="Standard Plan" data-fee="2799">Add Plan</button>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card plan-card">
-          <h5>Premium Plan</h5>
-          <p><strong>Fees:</strong> ₱4,499/month</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-            <li>Rerum, sapiente ipsa quasi corporis necessitatibus voluptate.</li>
-            <li>Nam voluptates ex quam, quidem quae</li>
-            <li>Est nam expedita quam ab et necessitatibus assumenda laboriosam eligendi?</li>
-          </ul>
-          <button class="btn btn-primary add-to-cart" data-plan="Premium Plan" data-fee="4499">Add Plan</button>
-        </div>
+    <div class="col-md-4 mb-4">
+  <div class="card plan-card shadow-lg border-0">
+    <div class="card-body">
+      <h5 class="card-title text-uppercase text-center font-weight-bold mb-3">Basic Plan</h5>
+      <p class="card-text text-center">
+        <span class="display-4 text-primary font-weight-bold">₱1,699</span><small>/month</small>
+      </p>
+      <ul class="list-unstyled mt-4">
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Access to gym facilities</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Free group classes (2 per week)</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 1 personal training session per month</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Locker and shower room access</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 5% discount on merchandise</li>
+      </ul>
+      <div class="text-center mt-4">
+        <button class="btn btn-outline-primary btn-lg add-to-cart" data-plan="Basic Plan" data-fee="1699">Add Basic Plan</button>
       </div>
     </div>
   </div>
+</div>
+
+<div class="col-md-4 mb-4">
+  <div class="card plan-card shadow-lg border-0">
+    <div class="card-body">
+      <h5 class="card-title text-uppercase text-center font-weight-bold mb-3">Standard Plan</h5>
+      <p class="card-text text-center">
+        <span class="display-4 text-primary font-weight-bold">₱2,799</span><small>/month</small>
+      </p>
+      <ul class="list-unstyled mt-4">
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Unlimited access to gym facilities</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Free group classes (4 per week)</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 2 personal training sessions per month</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Locker and shower room access</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Free sauna and steam room access</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 10% discount on merchandise</li>
+      </ul>
+      <div class="text-center mt-4">
+        <button class="btn btn-outline-primary btn-lg add-to-cart" data-plan="Standard Plan" data-fee="2799">Add Standard Plan</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 mb-4">
+  <div class="card plan-card shadow-lg border-0">
+    <div class="card-body">
+      <h5 class="card-title text-uppercase text-center font-weight-bold mb-3">Premium Plan</h5>
+      <p class="card-text text-center">
+        <span class="display-4 text-primary font-weight-bold">₱4,499</span><small>/month</small>
+      </p>
+      <ul class="list-unstyled mt-4">
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 24/7 access to gym facilities</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Unlimited group classes</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 4 personal training sessions per month</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Access to locker, shower, sauna, and steam rooms</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Free monthly nutritional consultations</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> 20% discount on fitness gear and merchandise</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> Free premium events & workshops</li>
+        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary"></i> VIP lounge access</li>
+      </ul>
+      <div class="text-center mt-4">
+        <button class="btn btn-outline-primary btn-lg add-to-cart" data-plan="Premium Plan" data-fee="4499">Add Premium Plan</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
   <!-- Basket Icon and Plan Cart Section -->
-  <div class="cart-section mt-4">
-    <h3>Gym Plan</h3>
-    <ul class="list-group" id="cartItems">
-      <!-- Plan Cart items will be dynamically added here -->
-    </ul>
-    <p><strong>Total:</strong> <span id="totalAmount">₱0</span></p>
-    <button class="btn btn-danger mt-5" id="clearCart">Delete Plan</button>
-    <button class="btn btn-success mt-5" id="checkout">Checkout</button>
+  <div class="cart-section mt-5 p-4 shadow-lg border-0">
+  <h3 class="text-uppercase text-center font-weight-bold mb-4">Your Selected Plan</h3>
+  <ul class="list-group list-group-flush" id="cartItems">
+    <!-- Plan Cart items will be dynamically added here -->
+  </ul>
+
+  <div class="d-flex justify-content-between align-items-center mt-4">
+    <p class="mb-0"><strong>Total:</strong> <span id="totalAmount" class="text-primary font-weight-bold">₱0</span></p>
   </div>
-</section>
+
+  <div class="text-center mt-5">
+    <button class="btn btn-outline-danger btn-lg me-2" id="clearCart">
+      <i class="bi bi-x-circle"></i> Delete Plan
+    </button>
+    <button class="btn btn-outline-success btn-lg" id="checkout">
+      <i class="bi bi-cart-check"></i> Checkout
+    </button>
+  </div>
+</div>
 
 <script>
-
     $(document).ready(function() {
       var cartItems = []; // Initialize cart items array
 
@@ -231,29 +303,40 @@
   </script>
 
 
-  <!-- Footer -->
-  <footer id="contact" class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5>Contact Us</h5>
-          <p>Location: 123 Gym Street, Dagupan City</p>
-          <p>Email: fitenthusiast@gmail.com</p>
-          <p>Phone: 09876543211</p>
-        </div>
-        
-        <div class="col-md-4">
-          <h5>Follow Us</h5>
-          <a href="#" class="text-dark mr-2"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="text-dark mr-2"><i class="fab fa-github"></i></a>
-          <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+<footer id="contact" class="footer bg-light text-dark mt-5 py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> Location: 123 Gym Street, Dagupan City</p>
+        <p><i class="bi bi-envelope-fill"></i> Email: <a href="mailto:fitenthusiast@gmail.com" class="text-dark">fitenthusiast@gmail.com</a></p>
+        <p><i class="bi bi-telephone-fill"></i> Phone: <a href="tel:09876543211" class="text-dark">09876543211</a></p>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase font-weight-bold">Follow Us</h5>
+        <div>
+          <a href="#" class="text-dark me-3"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="text-dark me-3"><i class="fab fa-github fa-lg"></i></a>
+          <a href="#" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
         </div>
       </div>
-    </div>
-  </footer>
 
-<!-- Include Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase font-weight-bold">Subscribe to Our Newsletter</h5>
+        <form id="subscribeForm">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+            <button class="btn btn-primary" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <p>&copy; 2024 FITEnthusiast. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
 <!-- Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
