@@ -26,10 +26,10 @@
           <a class="nav-link" href="index.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Trainers</a>
+          <a class="nav-link" href="#trainers">Trainers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="#plans">Plan</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact Us</a>
@@ -47,51 +47,52 @@
     <!-- Home Section -->
   
 
-  <!-- Home Section -->
-  <section id="about" class="about-section">
-  <h2>Welcome to FITEnthusiast</h2>
+   <!-- About Us Section -->
+   <section id="about" class="about-section">
+  <h2></h2>
   <div class="about-content">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel quia quam repudiandae ipsum aspernatur sequi adipisci, soluta non blanditiis nemo libero quo beatae perferendis, vitae quae error. Suscipit, quasi.</p>
-    <img src="styles/Gymshark Official Store - Gym Clothes & Workout Clothes.jpg" alt="About Us">
+    <p>Welcome to FITEnthusiast. We offer a variety of fitness classes and personal training sessions to help you achieve your fitness goals. Our experienced trainers are here to guide and motivate you every step of the way.</p>
+    <img src="styles/gym.jpg" alt="About Us">
   </div>
 </section>
 
 
 <!-- Trainers Section -->
-<section id="trainers" class="container my-5">
-  <h2 class="text-center mb-4">Our Trainers</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card trainer-card">
-        <img loading="lazy" src="styles/Pfp.jpg" alt="Trainer 1">
-        <div class="card-body text-center">
-          <h5 class="card-title">Name : Joseph</h5>
-          <p class="card-text">Certified Personal Trainer</p>
+ <!-- Trainers Section -->
+ <section id="trainers" class="container my-5">
+    <h2 class="text-center mb-4">Our Trainers</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card trainer-card">
+          <img loading="lazy" src="https://th.bing.com/th/id/R.03f9ed58ecd9ad70b46095d568957b01?rik=%2fZ%2fyJPr5y1jf8g&pid=ImgRaw&r=0" alt="Trainer 1">
+          <div class="card-body text-center">
+            <h5 class="card-title">Name : Joseph</h5>
+            <p class="card-text">Certified Personal Trainer</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card trainer-card">
+          <img loading="lazy" src="https://th.bing.com/th/id/R.7e063fe3f8c066424282466fa622751a?rik=deGl4EVHEgei0A&pid=ImgRaw&r=0" alt="Trainer 2">
+          <div class="card-body text-center">
+            <h5 class="card-title">Name : Ahmed</h5>
+            <p class="card-text">Fitness Instructor</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div  class="card trainer-card">
+          <img loading="lazy" src="https://www.attainbyaetna.com/content/dam/aetna/images/apollo/amir_headshot.jpg" alt="Trainer 3">
+          <div class="card-body text-center">
+            <h5 class="card-title">Name : Joe</h5>
+            <p class="card-text">Yoga Specialist</p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
-      <div class="card trainer-card">
-      <img loading="lazy" src="styles/Pfp.jpg" alt="Trainer 2">
-        <div class="card-body text-center">
-          <h5 class="card-title">Name : John</h5>
-          <p class="card-text">Fitness Instructor</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div  class="card trainer-card">
-      <img loading="lazy" src="styles/Pfp.jpg" alt="Trainer 3">
-        <div class="card-body text-center">
-          <h5 class="card-title">Name : Peter</h5>
-          <p class="card-text">Yoga Specialist</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
   
-<section class="plan-section">
+<section id="plans" class="plan-section">
   <h2>Choose a Plan</h2>
   <div class="container">
     <div class="row">
@@ -227,41 +228,8 @@
       // Initial cart display update
       updateCartDisplay();
     });
-</script>
+  </script>
 
-<!-- Developers Section -->
-<section id="developers" class="container my-5">
-  <h2 class="text-center mb-4">About Us</h2>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card trainer-card">
-        <img loading="lazy" src="styles/Pfp.jpg" alt="Trainer 1">
-        <div class="card-body text-center">
-          <h5 class="card-title">Name : Joseph</h5>
-          <p class="card-text">Project Manager</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card trainer-card">
-      <img loading="lazy" src="styles/Pfp.jpg" alt="Trainer 2">
-        <div class="card-body text-center">
-          <h5 class="card-title">Name : John</h5>
-          <p class="card-text">UI/UX Design</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div  class="card trainer-card">
-      <img loading="lazy" src="styles/Pfp.jpg" alt="Trainer 3">
-        <div class="card-body text-center">
-          <h5 class="card-title">Name : Peter</h5>
-          <p class="card-text">Researcher</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
   <!-- Footer -->
   <footer id="contact" class="footer">
@@ -284,80 +252,142 @@
     </div>
   </footer>
 
-  <!-- Login Modal -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="loginModalLabel">Login</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-        <form method="post" action="login.php">
-        <label for="username">Email:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <input type="submit" value="Login">
-    </form>
-        </div>
+<!-- Include Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="login.php" id="loginForm">
+          <div class="form-group">
+            <label for="username">Email:</label>
+            <input type="email" class="form-control" id="username" name="username" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+              <div class="input-group-append">
+                <button type="button" class="btn btn-outline-secondary" id="togglePasswordLogin" onclick="togglePassword('password', this)">
+                  <i class="fas fa-eye" id="eyeIconLogin"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+          <p class="mt-3 text-center">Don't have an account? <a href="#" data-toggle="modal" data-target="#registerModal">Register here</a></p>
+        </form>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Register Modal -->
-  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="registerModalLabel">Register</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-        <form method="post" action="register.php">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <input type="submit" value="Register">
-    </form>
-        </div>
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="post" action="register.php" id="registerForm">
+          <div class="form-group">
+            <label for="registerUsername">Username:</label>
+            <input type="text" class="form-control" id="registerUsername" name="username" placeholder="Choose a username" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Password:</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="registerPassword" name="password" placeholder="Create a password" required>
+              <div class="input-group-append">
+                <button type="button" class="btn btn-outline-secondary" id="togglePasswordRegister" onclick="togglePassword('registerPassword', this)">
+                  <i class="fas fa-eye" id="eyeIconRegister"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <div class="input-group">
+              <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+              <div class="input-group-append">
+                <button type="button" class="btn btn-outline-secondary" id="toggleConfirmPassword" onclick="togglePassword('confirmPassword', this)">
+                  <i class="fas fa-eye" id="eyeIconConfirm"></i>
+                </button>
+              </div>
+            </div>
+            <small id="passwordHelp" class="form-text text-muted">Make sure to type the same password.</small>
+          </div>
+          <button type="submit" class="btn btn-success btn-block">Register</button>
+          <p class="mt-3 text-center">Already have an account? <a href="#" data-toggle="modal" data-target="#loginModal">Login here</a></p>
+        </form>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Bootstrap and jQuery Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      alert('Logged in successfully!');
-      $('#loginModal').modal('hide');
-    });
+<!-- Bootstrap and jQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    document.getElementById('registerForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      alert('Registered successfully!');
-      $('#registerModal').modal('hide');
-    });
+<script>
+  // Toggle password visibility
+  function togglePassword(inputId, btn) {
+    const input = document.getElementById(inputId);
+    const eyeIcon = btn.querySelector('i');
+    if (input.type === 'password') {
+      input.type = 'text';
+      eyeIcon.classList.remove('fa-eye');
+      eyeIcon.classList.add('fa-eye-slash');
+    } else {
+      input.type = 'password';
+      eyeIcon.classList.remove('fa-eye-slash');
+      eyeIcon.classList.add('fa-eye');
+    }
+  }
+
+  // Handle login form submission
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Logged in successfully!');
+    $('#loginModal').modal('hide');
+  });
+
+  // Handle register form submission
+  document.getElementById('registerForm').addEventListener('submit', function(event) {
+    // Password confirmation validation
+    var password = document.getElementById('registerPassword').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (password !== confirmPassword) {
+      event.preventDefault(); // Prevent form submission
+      alert("Passwords do not match. Please try again."); // Show error message
+    } else {
+      alert('Registered successfully!'); // Alert if registration is successful
+      $('#registerModal').modal('hide'); // Hide registration modal
+      $('#loginModal').modal('show'); // Show login modal
+    }
+  });
+</script>
 
 
- 
 
-  </script>
  
 </body>
 </html>
